@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         Message message = new Message("user", userPrompt);
         List<Message> messageList = new ArrayList<>();
         messageList.add(message);
-        OpenAIRequestModel requestModel = new OpenAIRequestModel("gpt-3.5-turbo", messageList, 0.7f);
+        OpenAIRequestModel requestModel = new OpenAIRequestModel("gpt-4o-mini", messageList, 0.7f);
 
         // 使用Retrofit發送請求並處理回覆
         Call<OpenAIResponseModel> call = apiService.getCompletion(requestModel);
